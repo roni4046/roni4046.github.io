@@ -1,0 +1,112 @@
+
+<title>P05 JQuery FadeOut When Delete</title>
+<center><h1>Roni Saputra : 41226040 </h1></center>
+<hr>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<style>
+  body {
+    font-family: "Times New Roman";
+    font-size: 50px;
+    background-color: white;
+  }
+
+  tr {
+    background: red;
+    padding: 2px solid;
+    text-align: center;
+
+  }
+  td {
+    background: black;
+    cursor: pointer;
+    transition: .3s;
+    padding: 2px solid;
+    text-align: center;
+  }
+  td:hover {
+    background: black;
+  }
+  .tabel1 {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+
+  }
+</style>
+
+<table class="tabel1">
+  <tr>
+    <th>No</th>
+    <th>Nama Kawan</th>
+    <th>Alamat</th>
+    <th >Aksi</th>
+  </tr>
+  <tr id="row__1">
+    <td>1</td>
+    <td class="nama">Akmal Mustafa</td>
+    <td class="alamat">Cirebon</td>
+    <td class="hapus" id="hapus__1">Hapus</td>
+  </tr>
+  <tr id="row__2">
+    <td>2</td>
+    <td class="nama">Putri Nabilla</td>
+    <td class="alamat">Cirebon</td>
+    <td class="hapus" id="hapus__2">Hapus</td>
+  </tr>
+  <tr id="row__3">
+    <td>3</td>
+    <td class="nama">Ica Unari</td>
+    <td class="alamat">Cirebon</td>
+    <td class="hapus" id="hapus__3">Hapus</td>
+  </tr>
+  <tr id="row__4">
+    <td>4</td>
+    <td class="nama">Novi Firda Aini</td>
+    <td class="alamat">Cirebon</td>
+    <td class="hapus " id="hapus__4">Hapus</td>
+  </tr>
+  <tr id="row__5">
+    <td>5</td>
+    <td class="nama">Olanda</td>
+    <td class="alamat">Cirebon</td>
+    <td class="hapus" id="hapus__5">Hapus</td>
+  </tr>
+</table>
+
+<script>
+  $(document).ready(function(){
+    $('.nama').click(function(){
+      let isi = $(this).text();
+      let isi2 = prompt('Apakah anda ingin mengubahnya?:',isi);
+      if(!isi2) return;
+
+      $(this).text(isi2);
+    })
+
+    $('.alamat').click(function(){
+     let isi = $(this).text();
+     let isi2 = prompt('Apakah anda ingin mengubahnya?:',isi);
+     if(!isi2) return;
+
+     $(this).text(isi2);
+    })
+
+
+    $('.hapus').click(function(){
+     let betul = confirm('Anda yakin ingin menghapusnya?');
+     if(!betul) return;
+
+     let id = $(this).prop('id');
+
+
+     let rid = id.split('__');
+     let baris_ke = rid[1];
+
+
+     $('#row__'+baris_ke).slideUp("slow");
+
+    });
+
+  });
+</script>
