@@ -1,32 +1,52 @@
-<style>
-	h1{
-		color: red;
-		cursor: pointer;
-		transition: 0.2s;
-	}
-	h1:hover{
-		color: green;
-		letter-spacing: 1px;
-	}
-	img{
-		width: 4cm;
-		height: 4cm;
-		border-radius: 50%;
-		box-shadow: 1px 2px 4px white;
-		margin: 10px;
-		transition: 0.2s;
-		opacity: 95%;
-		object-fit: cover;
-	}
-	img:hover{
-		transform: scale(1.2);
-		box-shadow: 1px 2px 6px blue;
-		opacity: 100%;
-	}
-</style>
-<h1>Hello World HTML</h1>
-<p>MyName is Roni Saputra, NIM 41226040</p>
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Roni Saputra</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        h1, h2 {
+            color: #343a40;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Roni Saputra</h1>
+        <h2>Profil</h2>
+        <p>Seorang profesional dalam bidang teknologi informasi dengan pengalaman mengajar dan keahlian dalam jaringan komputer.</p>
 
-<a href="https://imgbb.com/"><img src="https://i.ibb.co/sJbn661/foto-roni-biru.jpg" alt="foto-roni-biru" border="0"></a>
+        <div class="section">
+            <h2>Pendidikan</h2>
+            <p>S1 Teknik Informatika, STMIK IKMI Cirebon</p>
+        </div>
 
-<button onclick="alert('Hello World Javascript!')">Hello World Javascript! </button>
+        <div class="section">
+            <h2>Keahlian</h2>
+            <ul>
+                <li>Jaringan Komputer</li>
+                <li>CCNA</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>Pengalaman Kerja</h2>
+            <p>Guru TKJ dan RPL, SMK Al-Istiqomah Kota Cirebon</p>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
